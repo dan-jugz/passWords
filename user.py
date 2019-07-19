@@ -21,3 +21,19 @@ class User:
         ''' 
         User.user_list.append(self)
     
+    @classmethod
+    def display_users(cls):
+        '''
+
+        '''
+        return cls.user_list
+
+    @classmethod
+    def user_verified(cls,name,password):
+        '''
+        '''
+        for user in cls.user_list:
+            if user.name==name and user.password==password:
+                return True
+            return False
+
