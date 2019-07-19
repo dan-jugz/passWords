@@ -20,3 +20,4 @@ class User:
         saves user info into user list
         ''' 
         User.user_list.append(self)
+    

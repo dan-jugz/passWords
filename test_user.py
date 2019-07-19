@@ -20,12 +20,26 @@ class TestUser(unittest.TestCase):
 
     def test_save_user(self):
         '''
-        to check if the contact object is saved into
+        to check if the user object is saved into
         '''
         self.new_user.save_user() #saving a user
         self.assertEqual(len(User.user_list),1)
     
-   
+    def test_save_multple_user(self):
+        '''
+        test save multiple contacts to check if we can save multiple contact
+        '''
+        self.new_user.save_user()
+        test_user = User("sunday","098zyx") # new user
+        test_user.save_user()
+        self.assertEqual(len(User.user_list),2)
+
+    
+    def tearDown(self):
+        '''
+        method that clears the array after each test has ran
+        '''
+        User.user_list=[]
 
         
 if __name__=="__main__":
