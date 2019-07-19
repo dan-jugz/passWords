@@ -13,3 +13,10 @@ class User:
             self.name:user name
             self.password:user password
         '''
+    user_list=[]  #empty contact list
+
+    def save_user(self):
+        '''
+        saves user info into user list
+        ''' 
+        User.user_list.append(self)

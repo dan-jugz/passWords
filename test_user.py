@@ -24,6 +24,8 @@ class TestUser(unittest.TestCase):
         '''
         self.new_user.save_user() #saving a user
         self.assertEqual(len(User.user_list),1)
+    
+   
 
         
 if __name__=="__main__":
