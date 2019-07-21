@@ -30,7 +30,7 @@ class TestUser(unittest.TestCase):
         test save multiple contacts to check if we can save multiple contact
         '''
         self.new_user.save_user()
-        test_user = User("sunday","098zyx") # new user
+        test_user = User("sunday","sunday@brian.com") # new user
         test_user.save_user()
         self.assertEqual(len(User.user_list),2)
 
@@ -40,10 +40,16 @@ class TestUser(unittest.TestCase):
         method that clears the array after each test has ran
         '''
         User.user_list=[]
+    
+    def test_delete_user(self):
+        self.new_user.save_user()
+        test_data= User("juliet","julie@gmail.com")
+        test_data.save_user()
+        self.assertEqual(len(User.user_list),2)
 
     def test_display_users(self):
         '''
-
+        test to see if the users are getting displayed
         '''
         self.assertEqual(User.display_users(),User.user_list)
 
