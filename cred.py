@@ -17,3 +17,10 @@ class Info:
         method to delete credentials
         '''
         Info.info_list.remove(self)
+
+    @classmethod
+    def display_info(cls):
+        '''
+        a class method involves the whole class the display info display user information
+        '''
+        return cls.info_list
