@@ -1,9 +1,9 @@
-
-
 class User:
     '''
     create a class that generates new instances of user
     '''
+    user_list=[]  #empty contact list
+
     def __init__(self,name,e_mail):
         self.name=name
         self.e_mail=e_mail
@@ -13,7 +13,6 @@ class User:
             self.name:user name
             self.e_mail:user e_mail
         '''
-    user_list=[]  #empty contact list
 
     def save_user(self):
         '''
