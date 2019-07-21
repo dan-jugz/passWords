@@ -11,7 +11,7 @@ class User:
         init method that helps us define the user properties
         Args
             self.name:user name
-            self.password:user password
+            self.e_mail:user e_mail
         '''
     user_list=[]  #empty contact list
 
@@ -34,12 +34,13 @@ class User:
         '''
         return cls.user_list
 
-    @classmethod
-    def user_verified(cls,name,password):
-        '''
-        '''
-        for user in cls.user_list:
-            if user.name==name and user.password==password:
-                return True
-            return False
+    # @classmethod
+    # def user_verified(cls,name,e_mail):
+    #     '''
+    #     '''
+    #     for user in cls.user_list:
+    #         if user.name==name and user.e_mail==e_mail:
+    #             return True
+    #         else:
+    #             return False
 

@@ -9,11 +9,11 @@ class TestUser(unittest.TestCase):
     def setUp(self):
         '''setup method to run before each testcase
         '''
-        self.new_user= User("daniel","123abc")#create my user object
+        self.new_user= User("daniel","njuguna@gmail.com")#create my user object
     
     def test_init(self):
         self.assertEqual(self.new_user.name,"daniel")
-        self.assertEqual(self.new_user.password,"123abc")
+        self.assertEqual(self.new_user.e_mail,"njuguna@gmail.com")
         '''
         test to check if the object is initialised correctly
         '''
@@ -53,13 +53,13 @@ class TestUser(unittest.TestCase):
         '''
         self.assertEqual(User.display_users(),User.user_list)
 
-    def test_login_user(self):
-        self.new_user.save_user()
-        test_user=User("daniel","123abc")
-        test_user.save_user()
-        logged_in=User.user_verified("daniel","123abc")
+    # def test_login_user(self):
+    #     self.new_user.save_user()
+    #     test_user=User("daniel","123abc@gmail.com")
+    #     test_user.save_user()
+    #     logged_in=User.user_verified("daniel","123abc@gmail.com")
 
-        self.assertTrue(logged_in)
+    #     self.assertEquals(logged_in)
 if __name__=="__main__":
     unittest.main()
     
