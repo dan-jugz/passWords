@@ -11,4 +11,8 @@ def create_credentials(facebk_pass,email_pass):
     new_cred=Info(facebk_pass,email_pass)
     return new_cred
 
-    
+def save_account(user):
+    user.save_user()
+
+def save_credentials(credentials):
+    credentials.save_info()
