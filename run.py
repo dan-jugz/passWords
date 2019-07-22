@@ -43,7 +43,7 @@ def main():
         short_code = input() .lower()
         if short_code =='cc':
             print(" ")
-            print("-" * 156)
+            print("-" * 130)
             print("    ***CREATE A NEW ACCOUNT!")
             print(" ")
             print("what is your first name?..")
@@ -62,3 +62,30 @@ def main():
             print("-" * 100)
             print(f"New Account { name} { acct } has been created")
             print('\n')
+        elif short_code =='dac':
+            if display_users():
+                print(" ")
+                print("The user name")
+                print(" ")
+                print('\n')
+                for user in display_users():
+                    print(f"{acct}")
+                for cred in display_creds():
+                    print (f"{acct_pass}")
+                    print(" ")
+            else:
+                    print('\n')
+                    print("-" * 130)
+                    print(" ")
+                    print("                 ***  PLEASE CREATE AN ACCOUNT ")
+                    print("                   *** You have not created an account yet :( ")
+                    print(" ")
+
+        elif short_code =='gs':
+            print(" ")
+            print("TO GENERATE A PASSWORD, ENTER YOUR NAME AND ACCOUNT BELOW! ")
+            print(" ")
+            list_of_inputs = [c for c in input()]
+            list_of_inputs.reverse()
+            print(list_of_inputs)
+
