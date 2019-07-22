@@ -89,3 +89,22 @@ def main():
             list_of_inputs.reverse()
             print(list_of_inputs)
 
+        elif short_code == "ex":
+            print("-"*130)
+            print(" ")
+            print("                        THAX FOR DROPING IN!")
+            print("                           Bye Bye..xoxo.")
+            print(" ")
+            print("-" * 130)
+            break
+        else:
+            print("-" * 130)
+            print(" ")
+            print("                             ++ RETRY!!")
+            print(" ")
+            print("                Please Select One Of The Options Provided")
+            print(" ")
+
+if __name__ == '__main__':
+
+    main()
