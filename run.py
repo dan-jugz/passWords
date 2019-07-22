@@ -39,3 +39,14 @@ def main():
         print(" ")
         print("      TYPE IN A SHORT CODE!")
         print(" ")
+
+        short_code = input() .lower()
+        if short_code =='cc':
+            print(" ")
+            print("-" * 156)
+            print("      CREATE A NEW ACCOUNT!")
+            print(" ")
+            print(" ")
+            print("what is your first name?..")
+            print(" ")
+            name= input()
