@@ -35,3 +35,7 @@ def main():
 2. ex - EXIT PASSWORD LOCK
 3. dac - DISPLAY ACCOUNTS
 4. gs - GENERATE PASSWORDS""")
+
+        print(" ")
+        print("      TYPE IN A SHORT CODE!")
+        print(" ")
