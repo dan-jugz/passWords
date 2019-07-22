@@ -22,3 +22,16 @@ def display_users():
 
 def display_creds():
     return Info.display_info()
+
+def main():
+    print(" ")
+    print("HELLO THERE  WELCOME!!")
+    print(" ")
+    print(" ")
+    while True:
+        print("-" * 130)
+        print("""USE THE FOLLOWING SHORT CODES!!
+1. cc - CREATE NEW ACCOUNT
+2. ex - EXIT PASSWORD LOCK
+3. dac - DISPLAY ACCOUNTS
+4. gs - GENERATE PASSWORDS""")
