@@ -35,6 +35,13 @@ def display_users():
     '''
     return User.display_users()
 
+def user_log_in(name, password):
+    '''
+    function that allows a user to log in to their account to view or change details
+    '''
+    verified_user= User.user_verified(name,password)
+    return verified_user
+
 def display_creds():
     '''
     method that displays the various credentials that you have logged into the app
@@ -52,7 +59,8 @@ def main():
 1. cc - CREATE NEW ACCOUNT
 2. ex - EXIT PASSWORD LOCK
 3. dac - DISPLAY ACCOUNTS
-4. gs - GENERATE PASSWORDS""")
+4. gs - GENERATE PASSWORDS
+5. lg - LOGIN TO YOUR ACCOUNT""")
 
         print(" ")
         print("      TYPE IN A SHORT CODE!")
@@ -99,9 +107,66 @@ def main():
                     print("                   *** You have not created an account yet :( ")
                     print(" ")
 
+        elif short_code == "lg":
+            '''
+            Logs in user to the password locker account
+            '''
+            print('\n')
+            print("*"*32)    
+            print("Log into Password Locker Account")
+            print("*"*32)
+
+            print("Enter User Name")
+            user_name = input()
+            
+            print("Enter Password")
+            user_password = input()
+
+
+            if  user_log_in(user_name,user_password):
+                print('\n')
+                print("-"*130)    
+                print(f"Welcome {user_name} to your Credentials" )
+                print("-"*130)
+
+                while True:
+                    '''
+                    Loop to run functionalities after successful login
+                    '''
+                    print('''Use these short code to navigate \n
+                        cc:Create a new credential \n
+                        dc:Display saved credentials \n
+                        gc:Generate credential with a random password\n
+                        dl:Delete credential\n    
+                        ex:Log out of credential account           ''')
+
+                    #get short code from user
+                    short_code = input().lower()
+
+                    if short_code == "cc":
+                        '''
+                        Creating a credential
+                        '''
+                        print('\n')
+                        print("New Credential")
+                        print("-"*15)
+
+                        print("Name of the Credential...")   
+                        credential_name = input()
+
+                        print("Password of the Credential...")
+                        credential_password = input()
+
+                        #create and save credential
+                        save_credentials( create_credentials(credential_name,credential_password)
+                        )
+
+                        print('\n')
+                        print(f"Credentials for *{credential_name}* has been created and saved successfully")
+                        print('\n')
         elif short_code =='gs':
             print(" ")
-            print("TO GENERATE A PASSWORD, ENTER YOUR NAME AND ACCOUNT BELOW! ")
+            print("   ***TO GENERATE A PASSWORD, ENTER YOUR NAME AND ACCOUNT BELOW! ")
             print(" ")
             list_of_inputs = [c for c in input()]
             list_of_inputs.reverse()
