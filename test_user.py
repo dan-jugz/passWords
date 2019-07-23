@@ -53,13 +53,17 @@ class TestUser(unittest.TestCase):
         '''
         self.assertEqual(User.display_users(),User.user_list)
 
-    # def test_login_user(self):
-    #     self.new_user.save_user()
-    #     test_user=User("daniel","123abc@gmail.com")
-    #     test_user.save_user()
-    #     logged_in=User.user_verified("daniel","123abc@gmail.com")
+    def test_login_user(self):
+        '''
+        test to login a user
+        '''
+        self.new_user.save_user()
+        test_user=User("daniel","123abc@gmail.com")
+        test_user.save_user()
+        logged_in=User.user_verified("daniel","123abc@gmail.com")
 
-    #     self.assertEquals(logged_in)
+        self.assertTrue(logged_in)
+
 if __name__=="__main__":
     unittest.main()
     

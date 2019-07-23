@@ -4,23 +4,41 @@ from cred import Info
 
 
 def create_account(name,e_mail):
+    '''
+    creating a new account
+    '''
     new_user=User(name,e_mail)
     return new_user
 
 def create_credentials(facebk_pass,email_pass):
+    '''
+    create credentials of password and email
+    '''
     new_cred=Info(facebk_pass,email_pass)
     return new_cred
 
 def save_account(user):
+    '''
+    save the user 
+    '''
     user.save_user()
 
 def save_credentials(cred):
+    '''
+    a method to save new user account
+    '''
     cred.save_info()
 
 def display_users():
+    '''
+    a method to display the users already using this password locker
+    '''
     return User.display_users()
 
 def display_creds():
+    '''
+    method that displays the various credentials that you have logged into the app
+    '''
     return Info.display_info()
 
 def main():
@@ -99,7 +117,6 @@ def main():
             break
         else:
             print("-" * 130)
-            print(" ")
             print("                             ++ RETRY!!")
             print(" ")
             print("                Please Select One Of The Options Provided")

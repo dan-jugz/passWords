@@ -33,13 +33,14 @@ class User:
         '''
         return cls.user_list
 
-    # @classmethod
-    # def user_verified(cls,name,e_mail):
-    #     '''
-    #     '''
-    #     for user in cls.user_list:
-    #         if user.name==name and user.e_mail==e_mail:
-    #             return True
-    #         else:
-    #             return False
+    @classmethod
+    def user_verified(cls,name,e_mail):
+        '''
+        method that takes user login info and returns a boolean true if details are correct 
+        '''
+        for user in cls.user_list:
+            if user.name==name and user.e_mail==e_mail:
+                return True
+            else:
+                return False
 

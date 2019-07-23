@@ -15,7 +15,7 @@ Input|Behavior|Output
 ----|----|------
 run the file|outputs the various things the app can do|asks user to input a code according to how they want to navigate
 create somr password credentials|save user credentials|displays the users credentials and password
-*i
+
 
 
 
